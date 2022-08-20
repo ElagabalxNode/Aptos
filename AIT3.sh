@@ -68,7 +68,7 @@ aptos genesis set-validator-configuration \
   --local-repository-dir ~/$WORKSPACE \
   --username $NODENAME \
   --validator-host $PUBLIC_IP:6180
-  --owner-public-identity-file ~/$WORKSPACE/keys/$NODENAME/owner.yaml \
+  --owner-public-identity-file ~/$WORKSPACE/public-keys.yaml \
   --stake-amount 100000000000000
   
 # generate root key
