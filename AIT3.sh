@@ -61,10 +61,11 @@ wget -qO docker-compose.yaml wget https://raw.githubusercontent.com/aptos-labs/a
 wget -qO validator.yaml wget https://raw.githubusercontent.com/aptos-labs/aptos-core/main/docker/compose/aptos-node/validator.yaml
 
 # generate keys
-aptos genesis generate-keys --output-dir ~/$WORKSPACE/keys
+aptos genesis generate-keys --output-dir ~/$WORKSPACE
 
 # configure validator
 aptos genesis set-validator-configuration \
+  --keys-dir ~/$WORKSPACE \
   --local-repository-dir ~/$WORKSPACE \
   --username $NODENAME \
   --validator-host $PUBLIC_IP:6180
