@@ -65,7 +65,7 @@ aptos genesis generate-keys --output-dir ~/$WORKSPACE/keys
 
 # configure validator
 aptos genesis set-validator-configuration \
-  --local-repository-dir ~/$WORKSPACE/keys \
+  --local-repository-dir ~/$WORKSPACE \
   --username $NODENAME \
   --validator-host $PUBLIC_IP:6180
   --owner-public-identity-file ~/$WORKSPACE/keys/public-keys.yaml \
