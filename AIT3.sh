@@ -61,14 +61,14 @@ wget -qO docker-compose.yaml wget https://raw.githubusercontent.com/aptos-labs/a
 wget -qO validator.yaml wget https://raw.githubusercontent.com/aptos-labs/aptos-core/main/docker/compose/aptos-node/validator.yaml
 
 # generate keys
-aptos genesis generate-keys --output-dir ~/$WORKSPACE
+aptos genesis generate-keys --output-dir ~/$WORKSPACE/keys
 
 # configure validator
 aptos genesis set-validator-configuration \
   --local-repository-dir ~/$WORKSPACE \
   --username $NODENAME \
   --validator-host $PUBLIC_IP:6180
-  --owner-public-identity-file ~/$WORKSPACE/public-keys.yaml \
+  --owner-public-identity-file ~/$WORKSPACE/keys/public-keys.yaml \
   --stake-amount 100000000000000
   
 # generate root key
